@@ -1,0 +1,203 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "sKyoKun",
+      "email": "john.doe@levelup.com",
+      "enable": true,
+      "money": 1000,
+      "level": 2,
+      "xp": 1500
+    },
+    {
+      "id": 2,
+      "username": "Bob l'éponge",
+      "email": "bob@levelup.com",
+      "enable": false,
+      "money": 1000,
+      "level": 0,
+      "xp": 0
+    },
+    {
+      "username": "toto",
+      "email": "toto@toto.com",
+      "enable": false,
+      "money": 1000,
+      "level": 1,
+      "xp": 0,
+      "id": 3
+    },
+    {
+      "username": "tets@toto",
+      "email": "totdddo@toto.com",
+      "enable": false,
+      "money": 1000,
+      "level": 1,
+      "xp": 0,
+      "id": 4
+    },
+    {
+      "username": "test",
+      "email": "testtest@totot.com",
+      "enable": true,
+      "money": 1000,
+      "level": 1,
+      "xp": 0,
+      "id": 5
+    }
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "userId": 1,
+      "atk": 100,
+      "def": 100,
+      "tauxCrit": 10,
+      "degCtrit": 10,
+      "pv": 1000
+    }
+  ],
+  "donjons": [
+    {
+      "id": 1,
+      "name": "Forêt de Garen",
+      "requiredLevel": 1,
+      "items": [
+        1,
+        2
+      ],
+      "xp": 100
+    },
+    {
+      "id": 2,
+      "name": "Mont Siz",
+      "requiredLevel": 3,
+      "items": [
+        3,
+        4
+      ],
+      "xp": 200
+    },
+    {
+      "id": 3,
+      "name": "Ruines de Kabir",
+      "requiredLevel": 6,
+      "items": [
+        5,
+        6,
+        7
+      ],
+      "xp": 300
+    },
+    {
+      "id": 4,
+      "name": "Montagne blanche de Ragon",
+      "requiredLevel": 8,
+      "items": [
+        8,
+        9
+      ],
+      "xp": 400
+    },
+    {
+      "id": 5,
+      "name": "Forêt de Telain",
+      "requiredLevel": 12,
+      "items": [
+        8,
+        9,
+        10
+      ],
+      "xp": 500
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "bonus": "atk",
+      "value": 15,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 2,
+      "bonus": "def",
+      "value": 15,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 3,
+      "bonus": "tauxCrit",
+      "value": 15,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 4,
+      "bonus": "degCrit",
+      "value": 15,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 5,
+      "bonus": "pv",
+      "value": 250,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 6,
+      "bonus": "atk",
+      "value": 30,
+      "price": 200,
+      "updateLevel": 0
+    },
+    {
+      "id": 7,
+      "bonus": "def",
+      "value": 30,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 8,
+      "bonus": "tauxCrit",
+      "value": 30,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 9,
+      "bonus": "degCrit",
+      "value": 30,
+      "price": 100,
+      "updateLevel": 0
+    },
+    {
+      "id": 10,
+      "bonus": "pv",
+      "value": 500,
+      "price": 100,
+      "updateLevel": 0
+    }
+  ],
+  "settings": {
+    "levelUpRatio": 0.3,
+    "donjonItemWinRate": 0.5,
+    "levelOneBaseXp": 1000
+  },
+  "inventories": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "itemId": 1,
+          "equipped": true
+        }
+      ]
+    }
+  ]
+}

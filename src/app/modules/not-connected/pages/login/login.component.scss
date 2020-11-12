@@ -1,0 +1,70 @@
+.login {
+  width: 600px;
+  height: 600px;
+  background-color: rgba($color: #fff, $alpha:0.1);
+  border: 1px solid rgba($color: #fff, $alpha:0.15);
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -300px;
+
+  label {
+    display: block;
+  }
+
+  input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border:none;
+  }
+
+  form {
+    padding-top:200px;
+  }
+
+  button[type=submit] {
+    background-color: #08A9C7;
+    font-size:14px;
+    line-height:40px;
+    height:40px;
+    text-align: center;
+    padding: 0px 30px;
+    border:none;
+    transition:  all 0.2s;
+    text-transform: uppercase;
+    color: #020320;
+    cursor: pointer;
+    margin: auto auto;
+    display:block;
+    font-weight: bold;
+
+    &:hover {
+      background: darken($color: #08A9C7, $amount: 10);
+    }
+  }
+
+  a {
+    color: #FFF;
+  }
+
+  .form-control {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+
+    &.has-error input {
+      -webkit-box-shadow : 0 0 1px 1px #ff0808;
+      box-shadow: 0 0 1px 1px #ff0808;
+    }
+
+    &.has-error app-form-control-error {
+      display: block;
+      color:  #ff0808;
+    }
+  }
+}

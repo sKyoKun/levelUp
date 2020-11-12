@@ -1,0 +1,8 @@
+<div class="adventure">
+  <div class="dungeon-list">
+    <div class="dungeon" [class.disabled]="dungeon.requiredLevel > userStat.level " *ngFor="let dungeon of dungeons">
+      {{ dungeon.name }}
+      <span class="">{{ dungeon.requiredLevel }}</span>
+    </div>
+  </div>
+</div>

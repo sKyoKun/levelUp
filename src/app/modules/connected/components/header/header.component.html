@@ -1,0 +1,25 @@
+<nav class="header">
+  <div class="row">
+    <div class="col-md-2"><h1>Level up</h1></div>
+    <div class="col-md-4">
+      <a routerLink="/app">Accueil</a>
+      <a routerLink="/app/settings">Parametres</a>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="username">{{ user?.username }}</div>
+          <div class="experience">
+            <div class="xp" [style]="'width :'+ currentPercentile +'%'"></div>
+          </div>
+          <div class="nextlevel"></div>
+        </div>
+        <div class="col-md-3">
+          <img src="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</nav>

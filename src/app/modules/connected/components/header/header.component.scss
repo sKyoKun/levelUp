@@ -1,0 +1,23 @@
+.experience {
+  width: 300px;
+  height: 6px;
+  background-color: grey;
+  border-radius: 2px;
+  .xp {
+    height: 6px;
+    background-color: yellow;
+    border-radius: 2px;
+  }
+}
+
+nav {
+  height:80px;
+
+  a {
+    line-height: 80px;
+    display:inline-block;
+    width: 100px;
+    color: white;
+    text-transform: uppercase;
+  }
+}

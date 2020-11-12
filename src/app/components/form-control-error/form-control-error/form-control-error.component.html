@@ -1,0 +1,14 @@
+
+<div *ngIf="control && control.errors && control.touched">
+  <div *ngIf="control.errors.required">Ce champs est requis.</div>
+  <div *ngIf="control.errors.email">Ce champs doit être un email.</div>
+  <div *ngIf="control.errors.minlength">
+      Min {{control.errors.minlength.actualLength}} / {{control.errors.minlength.requiredLength}}.
+  </div>
+  <div *ngIf="control.errors.maxlength">
+      Max {{control.errors.maxlength.actualLength}} / {{control.errors.maxlength.requiredLength}}.
+  </div>
+  <div *ngIf="control.errors.pattern">
+    Le pattern est invalid.
+  </div>
+</div>

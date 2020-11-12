@@ -1,0 +1,15 @@
+<div class="container">
+  <app-header></app-header>
+
+  <div class="row">
+    <div class="col-md-3">
+      <app-stats [userStat]="userStats"></app-stats>
+    </div>
+    <div class="col-md-6">
+      <app-adventure [dungeons]="dungeons" [userStat]="userStats"></app-adventure>
+    </div>
+    <div class="col-md-3">
+      <app-dungeon-info></app-dungeon-info>
+    </div>
+  </div>
+</div>
