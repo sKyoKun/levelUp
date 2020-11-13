@@ -1,49 +1,49 @@
 <div class="signup">
   <form [formGroup]="registerForm" (ngSubmit)="submit()">
-    <div class="form-control" [class.has-error]="username && username.errors && username.touched">
+    <div class="form-group" [class.has-error]="username && username.errors && username.touched">
       <label for="username">Username</label>
-      <input type="text" name="username" id="username" formControlName="username">
+      <input type="text" class="form-control" name="username" id="username" formControlName="username">
       <app-form-control-error [control]="username"></app-form-control-error>
     </div>
 
-    <div class="form-control" [class.has-error]="email && email.errors && email.touched">
+    <div class="form-group" [class.has-error]="email && email.errors && email.touched">
       <label for="email">Email</label>
-      <input type="text" name="email" id="email" formControlName="email">
+      <input type="text" class="form-control" name="email" id="email" formControlName="email">
       <app-form-control-error [control]="email"></app-form-control-error>
     </div>
 
-    <div class="form-control" [class.has-error]="password && password.errors && password.touched">
+    <div class="form-group" [class.has-error]="password && password.errors && password.touched">
       <label for="password">Mot de passe</label>
-      <input type="password" name="password" id="password" formControlName="password">
+      <input type="password" class="form-control" name="password" id="password" formControlName="password">
       <app-form-control-error [control]="password"></app-form-control-error>
     </div>
 
-    <div class="form-control" [class.has-error]="passwordConfirm && passwordConfirm.errors && passwordConfirm.touched">
+    <div class="form-group" [class.has-error]="passwordConfirm && passwordConfirm.errors && passwordConfirm.touched">
       <label for="passwordConfirm">Confirmation mot de passe</label>
-      <input type="password" name="passwordConfirm" id="passwordConfirm" formControlName="passwordConfirm">
+      <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" formControlName="passwordConfirm">
       <span *ngIf="passwordConfirm && password && password.value !== passwordConfirm.value">
         <span>Les 2 passwords ne correspondent pas</span>
       </span>
     </div>
 
-    <div class="form-control">
+    <div class="form-check">
       <label for="enable">Enabled ?</label>
       <input type="checkbox" name="enable" formControlName="enable">
     </div>
 
-    <div class="form-control" [class.has-error]="money && money.errors && money.touched">
+    <div class="form-group" [class.has-error]="money && money.errors && money.touched">
       <label for="money">Argent</label>
-      <input type="number" name="money" id="money" formControlName="money">
+      <input type="number" class="form-control" name="money" id="money" formControlName="money">
       <app-form-control-error [control]="money"></app-form-control-error>
     </div>
 
-    <div class="form-control" [class.has-error]="level && level.errors && level.touched">
+    <div class="form-group" [class.has-error]="level && level.errors && level.touched">
       <label for="level">Level</label>
-      <input type="number" name="level" id="level" formControlName="level">
+      <input type="number" class="form-control" name="level" id="level" formControlName="level">
       <app-form-control-error [control]="level"></app-form-control-error>
     </div>
 
-    <div class="form-control">
+    <div class="form-group">
       <button type="submit" [disabled]="registerForm.status === 'INVALID'">
         Goldorak go !
       </button>

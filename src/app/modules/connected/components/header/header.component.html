@@ -2,8 +2,10 @@
   <div class="row">
     <div class="col-md-2"><h1>Level up</h1></div>
     <div class="col-md-4">
-      <a routerLink="/app">Accueil</a>
-      <a routerLink="/app/settings">Parametres</a>
+      <ul>
+        <li><a routerLinkActive="active" routerLink="/app">Aventure</a></li>
+        <li><a routerLinkActive="active" routerLink="/app/settings">Paramètres</a></li>
+    </ul>
     </div>
     <div class="col-md-6">
       <div class="row">
@@ -12,7 +14,11 @@
           <div class="experience">
             <div class="xp" [style]="'width :'+ currentPercentile +'%'"></div>
           </div>
-          <div class="nextlevel"></div>
+          <div class="nextlevel">{{ currentPercentile }} %,
+            <span class="info">
+              Prochain niveau dans {{nextLevel}} points
+            </span>
+          </div>
         </div>
         <div class="col-md-3">
           <img src="">

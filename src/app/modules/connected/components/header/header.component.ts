@@ -15,26 +15,15 @@ export class HeaderComponent implements OnInit {
   public user : User;
   private _settings : Settings;
   public currentPercentile = 0;
+  public nextLevel = 0;
 
   constructor(private userService : UsersService, private settingService : SettingsService) {
-    this.retrieveUser(1);
-  }
-
-  public retrieveUser(userId: number): User {
-    if (!this.user) {
-      this.userService.getUser(userId).subscribe(res => {
-        this.user = res;
-      });
-    }
-
-    return this.user;
+    this.user = this.userService.authenticatedUser;
   }
 
   public getProgression(currentXP : number, level : number) {
     const levelOneXP = this._settings.levelOneBaseXp;
     let maxLevelXP = level * this._settings.levelUpRatio * levelOneXP;
-
-    console.log(currentXP/maxLevelXP);
 
     return currentXP/maxLevelXP;
 
@@ -50,11 +39,12 @@ export class HeaderComponent implements OnInit {
   private calcLevel() {
     let xpForNextLevel = this._settings.levelOneBaseXp;
 
-    for (let i = 1; i <= +this.user.level; i++) {
+    for (let i = 1; i <= +this.userService.authenticatedUser.level; i++) {
       xpForNextLevel = xpForNextLevel + (xpForNextLevel * this._settings.levelUpRatio);
     }
 
-    this.currentPercentile = Math.trunc((this.user.xp / xpForNextLevel) * 100);
+    this.nextLevel = xpForNextLevel - this.userService.authenticatedUser.xp;
+    this.currentPercentile = Math.trunc((this.userService.authenticatedUser.xp / xpForNextLevel) * 100);
   }
 
 }

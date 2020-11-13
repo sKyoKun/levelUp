@@ -10,25 +10,14 @@
   margin-left: -300px;
   margin-top: -300px;
 
-  label {
-    display: block;
-  }
-
-  input {
-    width: 400px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 15px;
-    box-sizing: border-box;
-    border:none;
-  }
-
   form {
     padding-top:200px;
+    width:400px;
+    margin: 0 auto;
   }
 
-  button[type=submit] {
-    background-color: #08A9C7;
+  button, a.button {
+    width: 200px;
     font-size:14px;
     line-height:40px;
     height:40px;
@@ -37,14 +26,23 @@
     border:none;
     transition:  all 0.2s;
     text-transform: uppercase;
-    color: #020320;
     cursor: pointer;
+    font-weight: bold;
     margin: auto auto;
     display:block;
-    font-weight: bold;
 
-    &:hover {
-      background: darken($color: #08A9C7, $amount: 10);
+    &[type=submit] {
+      background-color: #08A9C7;
+      color: #020320;
+
+      &:hover {
+        background: darken($color: #08A9C7, $amount: 10);
+      }
+    }
+
+    &.signup {
+      background-color: #8255d6;
+      color: #020320;
     }
   }
 
@@ -53,11 +51,7 @@
   }
 
   .form-control {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-
-    &.has-error input {
+    &.has-error {
       -webkit-box-shadow : 0 0 1px 1px #ff0808;
       box-shadow: 0 0 1px 1px #ff0808;
     }

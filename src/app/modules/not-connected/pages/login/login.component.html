@@ -1,23 +1,25 @@
 <div class="login">
   <form [formGroup]="connectionForm" (ngSubmit)="submit()">
-    <div class="form-control" [class.has-error]="email && email.errors && email.touched">
+    <div class="form-group" [class.has-error]="email && email.errors && email.touched">
       <label for="email">Email</label>
-      <input type="text" name="email" id="email" formControlName="email">
+      <input type="text" class="form-control" name="email" id="email" formControlName="email">
       <app-form-control-error [control]="email"></app-form-control-error>
     </div>
 
-    <div class="form-control" [class.has-error]="password && password.errors && password.touched">
+    <div class="form-group" [class.has-error]="password && password.errors && password.touched">
       <label for="password">Mot de passe</label>
-      <input type="password" name="password" id="password" formControlName="password">
+      <input type="password" class="form-control" name="password" id="password" formControlName="password">
       <app-form-control-error [control]="password"></app-form-control-error>
     </div>
 
-    <div class="form-control">
+    <div class="form-group">
       <button type="submit" [disabled]="connectionForm.status === 'INVALID'">
         Connexion
       </button>
     </div>
   </form>
 
-  <a routerLink="/user/signup">Inscription</a>
+  <a routerLink="/user/signup" class="button signup">
+    Inscription
+  </a>
 </div>

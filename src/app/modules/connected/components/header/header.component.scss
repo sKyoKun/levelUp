@@ -3,6 +3,7 @@
   height: 6px;
   background-color: grey;
   border-radius: 2px;
+  overflow: hidden;
   .xp {
     height: 6px;
     background-color: yellow;
@@ -13,11 +14,35 @@
 nav {
   height:80px;
 
-  a {
-    line-height: 80px;
-    display:inline-block;
-    width: 100px;
-    color: white;
-    text-transform: uppercase;
+  ul{
+    margin: 0;
+    width: 600px;
+    float: left;
+    li{
+        float: left;
+        list-style: none;
+        a{
+            height: 60px;
+            line-height: 60px;
+            padding: 0 30px;
+            color:rgba(255,255,255,.9);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            &:hover{
+                color:rgba(255,255,255,1);
+            }
+        }
+        a.active::after{
+            content:'';
+            display: block;
+            width: 30%;
+            height: 2px;
+            background: turquoise;
+            top: 50px;
+            position: absolute;
+        }
+
+    }
   }
 }
