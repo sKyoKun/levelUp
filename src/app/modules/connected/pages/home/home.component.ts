@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   public userStats : UserStat;
   public dungeons : Dungeon[] = [];
+  public chosenDungeon: Dungeon;
+  public dungeonInProgress : Dungeon = null;
 
   constructor(private userService : UsersService, private dungeonService : DungeonService) {
     this.userStats = userService.authenticatedUser;
@@ -25,4 +27,16 @@ export class HomeComponent implements OnInit {
 
   }
 
+  dungeonChosen(dungeon : Dungeon) {
+    this.chosenDungeon = dungeon;
+  }
+
+  inProgress(dungeon : Dungeon) {
+    this.dungeonInProgress = dungeon;
+  }
+
+  reinitDungeon() {
+    this.chosenDungeon = null;
+    this.dungeonInProgress =null;
+  }
 }

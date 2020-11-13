@@ -1,1 +1,13 @@
-<p>dungeon-info works!</p>
+<div class="dungeon-info" *ngIf="dungeon">
+  <h2>Dungeon info</h2>
+  <div *ngFor="let item of items | filterItem : dungeon.items" class="item">
+    <div [ngSwitch]="item.id">
+      <div *ngSwitchCase="1"><img src="/assets/img/hache.png"></div>
+      <div *ngSwitchCase="2"><img src="/assets/img/potion.png"></div>
+      <div *ngSwitchDefault></div>
+    </div>
+  </div>
+
+  <button class="launch" (click)="launchDungeon()" *ngIf="!isLaunched">Lancer l'expedition</button>
+</div>
+

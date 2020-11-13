@@ -1,0 +1,32 @@
+.dungeon-info {
+  border : 1px solid rgba(105, 102, 102, 0.3);
+  padding : 10px;
+
+  .item {
+    display: inline-block;
+    width: 40px;
+    margin: 3px;
+    border : 1px solid rgba(105, 102, 102, 0.3);
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .launch {
+    background-color: transparent;
+    border:1px solid yellow;
+    width: 200px;
+    font-size:14px;
+    line-height:40px;
+    height:40px;
+    text-align: center;
+    padding: 0px 10px;
+    transition:  all 0.2s;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px auto;
+    display:block;
+  }
+}

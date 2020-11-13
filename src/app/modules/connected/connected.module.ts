@@ -8,11 +8,21 @@ import { StatsComponent } from './components/stats/stats.component';
 import { AdventureComponent } from './components/adventure/adventure.component';
 import { DungeonInfoComponent } from './components/dungeon-info/dungeon-info.component';
 import { StuffComponent } from './components/stuff/stuff.component';
+import { FilterItemPipe } from 'src/app/pipes/filter-item.pipe';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, SettingsComponent, HeaderComponent, StatsComponent, AdventureComponent, DungeonInfoComponent, StuffComponent],
+  declarations: [
+    HomeComponent,
+    SettingsComponent,
+    HeaderComponent,
+    StatsComponent,
+    AdventureComponent,
+    DungeonInfoComponent,
+    StuffComponent,
+    FilterItemPipe
+  ],
   imports: [
     CommonModule,
     ConnectedRoutingModule

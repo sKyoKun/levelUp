@@ -1,16 +1,57 @@
-.dungeon-list {
+.dungeon {
+  border: 1px solid #fff;
+  padding : 12px;
 
-  .dungeon {
-    border: 1px solid #fff;
-    padding : 12px;
+  span {
+    float: right;
+  }
 
-    span {
-      float: right;
+  &.disabled {
+    border: 1px solid rgb(151, 151, 151);
+    color:  rgb(151, 151, 151);
+  }
+
+  &.chosen {
+      border-color: yellow;
+      border-width: 2px;
+      background: linear-gradient(to right, transparent, rgba(240, 225, 14, 0.5));
+  }
+
+}
+
+.dungeon-progress {
+  p {
+    margin: 30px auto;
+    text-align: center;
+
+    &.countdown {
+      color:yellow;
     }
+  }
 
-    &.disabled {
-      border: 1px solid rgb(151, 151, 151);
-      color:  rgb(151, 151, 151);
+  > .dungeon {
+    &.chosen {
+      background: none;
     }
+  }
+}
+
+.reinit {
+  background-color: transparent;
+  border-bottom:1px solid turquoise;
+  font-size:14px;
+  line-height:40px;
+  height:40px;
+  text-align: center;
+  padding: 0px 10px;
+  transition:  all 0.2s;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px auto;
+  display:block;
+  color: white;
+
+  &:hover {
+    text-decoration: none;
   }
 }

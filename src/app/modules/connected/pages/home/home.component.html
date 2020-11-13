@@ -6,10 +6,17 @@
       <app-stats [userStat]="userStats"></app-stats>
     </div>
     <div class="col-md-6">
-      <app-adventure [dungeons]="dungeons" [userStat]="userStats"></app-adventure>
+      <app-adventure
+        [dungeons]="dungeons"
+        [userStat]="userStats"
+        (eventClick)="dungeonChosen($event)"
+        (reintialized)="reinitDungeon()"
+        [dungeonInProgress]="dungeonInProgress"
+      >
+    </app-adventure>
     </div>
     <div class="col-md-3">
-      <app-dungeon-info></app-dungeon-info>
+      <app-dungeon-info [dungeon]="chosenDungeon" (dungeonLaunched)="inProgress($event)"></app-dungeon-info>
     </div>
   </div>
 </div>

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { DefaultUrlSerializer } from '@angular/router';
 import { Settings } from 'src/app/models/settings.model';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
 import { SettingsService } from 'src/app/services/settings.service';
+import { UserStat } from 'src/app/models/user-stat.model';
 
 @Component({
   selector: 'app-header',

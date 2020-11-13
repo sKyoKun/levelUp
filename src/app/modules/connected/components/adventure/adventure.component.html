@@ -1,8 +1,34 @@
+<h2>Adventure</h2>
 <div class="adventure">
-  <div class="dungeon-list">
-    <div class="dungeon" [class.disabled]="dungeon.requiredLevel > userStat.level " *ngFor="let dungeon of dungeons">
-      {{ dungeon.name }}
-      <span class="">{{ dungeon.requiredLevel }}</span>
+  <div class="dungeon-list" *ngIf="!dungeonInProgress">
+    <div class="row">
+      <div class="col-md-9"></div>
+      <div class="col-md-3 text-right">Required level</div>
     </div>
+    <div class="dungeon row"
+      [class.disabled]="dungeon.requiredLevel > userStat.level "
+      [class.chosen]="chosenDungeon && chosenDungeon.id === dungeon.id"
+      *ngFor="let dungeon of dungeons"
+      (click)="selectDungeon(dungeon.id)">
+      <div class="col-md-10">
+        {{ dungeon.name }}
+      </div>
+      <div class="col-md-2 text-right">
+        {{ dungeon.requiredLevel }}
+      </div>
+    </div>
+  </div>
+
+  <div class="dungeon-progress" *ngIf="dungeonInProgress && !dungeonTerminated">
+    <p>Expedition en cours ... </p>
+    <div class="dungeon row chosen">{{ dungeonInProgress.name }}</div>
+    <p class="countdown">Fin de l'expedition dans {{timeLeft}} secondes</p>
+  </div>
+
+  <div class="dungeon-progress" *ngIf="dungeonTerminated">
+    <p>Expedition terminée </p>
+    <div class="dungeon row chosen">{{ dungeonInProgress.name }}</div>
+    <p>Butins : </p>
+    <a (click)="reinitDungeon()" class="reinit">Retour à la liste des donjons</a>
   </div>
 </div>
